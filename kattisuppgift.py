@@ -1,4 +1,4 @@
-def binarySearch(alist, item):
+def binary_search(alist, item):
 	    if len(alist) == 0:
 	        return False
 	    else:
@@ -7,18 +7,17 @@ def binarySearch(alist, item):
 	          return True
 	        else:
 	          if item<alist[midpoint]:
-	            return binarySearch(alist[:midpoint],item)
+	            return binary_search(alist[:midpoint],item)
 	          else:
-	            return binarySearch(alist[midpoint+1:],item)
+	            return binary_search(alist[midpoint+1:],item)
 	
-	testlist = [0, 1, 2, 8, 13, 17, 19, 32, 42,]
-	print(binarySearch(testlist, 3))
-	print(binarySearch(testlist, 13))
+testlist = [0, 1, 2, 8, 13, 17, 19, 32, 42,]
+print(binary_search(testlist, 3))
+print(binary_search(testlist, 13))
   
-  
-  def main():
+def main():
     #Läs in listan
-    indata = input().strip()
+    indata = input("Ange en lista").strip()
     the_list = indata.split()
     #Läs in nycklar att söka efter
     key = input().strip()
@@ -27,3 +26,4 @@ def binarySearch(alist, item):
         key = input().strip()
 
 main()
+
